@@ -39,13 +39,13 @@ public class TodoListAdapter extends ViewHolderAdapter {
     @Override
     protected ViewHolderAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int position) {
         View view = LayoutInflater.from(context).inflate(R.layout.main_list_item, parent, false);
-        return new TodoListViewHolder(view);
+        return new TodoListViewHolder(view);// create a view and create a correspoding HashMap(vh);
     }
 
     @Override
     protected void onBindViewHolder(ViewHolderAdapter.ViewHolder viewHolder, int position) {
         Todo todo = (Todo) getItem(position);
-        ((TodoListViewHolder) viewHolder).todoText.setText(todo.text);
+        ((TodoListViewHolder) viewHolder).todoText.setText(todo.text);//put the data values to the vh;
     }
 
     private static class TodoListViewHolder extends ViewHolderAdapter.ViewHolder {
