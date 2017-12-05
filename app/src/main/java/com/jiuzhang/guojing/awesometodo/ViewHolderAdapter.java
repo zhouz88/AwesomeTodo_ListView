@@ -11,14 +11,14 @@ public abstract class ViewHolderAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder vh;
         if (convertView == null) {
-            vh = onCreateViewHolder(parent, position);
+            vh = onCreateViewHolder(parent, position);//create a new view and the corresponding vh!
             convertView = vh.view;
             vh.view.setTag(vh);
         } else {
             vh = (ViewHolder) convertView.getTag();
         }
 
-        onBindViewHolder(vh, position);
+        onBindViewHolder(vh, position);//put the data to the vh;
         return convertView;
     }
 
